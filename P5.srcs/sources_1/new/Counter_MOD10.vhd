@@ -33,7 +33,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Counter_MOD10 is
     Port ( clock : in STD_LOGIC;
-           count : out STD_LOGIC_VECTOR (3 downto 0));
+           count : out STD_LOGIC_VECTOR (3 downto 0);
+           reset_M10 : in STD_LOGIC);
 end Counter_MOD10;
 
 architecture Behavioral of Counter_MOD10 is
@@ -58,6 +59,7 @@ begin
     helpers_q(0) <= helpers_q(1) AND internal_q(1);
 
     count <= internal_q;
-    reset <= '1' when internal_q = "0101" else '0';
+    reset <= '1' when (internal_q = "0101" OR reset_M10 = '1') else '0' ;
+    
       
 end Behavioral;

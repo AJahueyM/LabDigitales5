@@ -43,11 +43,11 @@ architecture Behavioral of FlipFlopJK is
 
 signal q_helper : STD_LOGIC := '0';
 begin
-    process (clock, j, k)
+    process (clock, j, k, reset)
         begin
             if(reset = '1') then
                 q_helper <= '0';
-            elsif (clock = '1' and clock'event) then
+            elsif (clock = '0' and clock'event) then
                 if (j = '1' and k = '1') then
                     q_helper <= not q_helper;
                 elsif (j = '1' and k = '0') then

@@ -33,7 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Counter_MOD6 is
     Port ( clock : in STD_LOGIC;
-           count : out STD_LOGIC_VECTOR (2 downto 0));
+           count : out STD_LOGIC_VECTOR (3 downto 0));
 end Counter_MOD6;
 
 architecture Behavioral of Counter_MOD6 is
@@ -44,18 +44,18 @@ architecture Behavioral of Counter_MOD6 is
                reset : in STD_LOGIC;
                q : out STD_LOGIC);
     end component;
-    signal internal_q : STD_LOGIC_VECTOR(2 downto 0) := "000";
+    signal internal_q : STD_LOGIC_VECTOR(3 downto 0) := "0000";
     signal helpers_q : STD_LOGIC_VECTOR(1 downto 0) := "00";
     signal reset : STD_LOGIC := '0';
 begin
 
-    jk1 : FlipFlopJK port map('1', '1', clock, reset, internal_q(2));
-    jk2 : FlipFlopJK port map(internal_q(2), internal_q(2), clock, reset, internal_q(1));
-    jk3 : FlipFlopJK port map(helpers_q(0), helpers_q(0), clock, reset, internal_q(0));
+    jk1 : FlipFlopJK port map('1', '1', clock, reset, internal_q(3));
+    jk2 : FlipFlopJK port map(internal_q(3), internal_q(3), clock, reset, internal_q(2));
+    jk3 : FlipFlopJK port map(helpers_q(1), helpers_q(1), clock, reset, internal_q(1));
     
-    helpers_q(0) <= internal_q(2) AND internal_q(1);
+    helpers_q(1) <= internal_q(3) AND internal_q(2);
     
     count <= internal_q;
-    reset <= '1' when internal_q = "011" else '0';
+    reset <= '1' when internal_q = "0110" else '0';
       
 end Behavioral;

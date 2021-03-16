@@ -1,0 +1,189 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Mar  9 18:44:45 2021
+# Process ID: 6504
+# Current directory: C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3156 C:\Users\A00823315\Desktop\LabDigitales5-master_05\LabDigitales5-master\P5.xpr
+# Log file: C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/vivado.log
+# Journal file: C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/P5.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/Counter_MOD12_BCD_behav.wcfg
+source Clock.tcl
+add_force {/Clock/clock} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+restart
+add_force {/Clock/clock} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/Counter_MOD12_BCD_behav.wcfg
+source Clock.tcl
+add_force {/Clock/clock} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+save_wave_config {C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/Counter_MOD12_BCD_behav.wcfg}
+save_wave_config {C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/Counter_MOD12_BCD_behav.wcfg}
+save_wave_config {C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/Counter_MOD12_BCD_behav.wcfg}
+save_wave_config {C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/Counter_MOD12_BCD_behav.wcfg}
+save_wave_config {C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/Counter_MOD12_BCD_behav.wcfg}
+close_sim
+close [ open C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/P5.srcs/sources_1/new/Decoder.vhd w ]
+add_files C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/P5.srcs/sources_1/new/Decoder.vhd
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/P5.srcs/sources_1/new/Decoder.vhd] -no_script -reset -force -quiet
+remove_files  C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/P5.srcs/sources_1/new/Decoder.vhd
+close [ open C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/P5.srcs/sources_1/new/sSegDisplay.vhd w ]
+add_files C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/P5.srcs/sources_1/new/sSegDisplay.vhd
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Clock [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {an[7]} {an[6]} {an[5]} {an[4]} {an[3]} {an[2]} {an[1]} {an[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {dc_hrs[3]} {dc_hrs[2]} {dc_hrs[1]} {dc_hrs[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {dc_hrs[3]} {dc_hrs[2]} {dc_hrs[1]} {dc_hrs[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {dc_min[3]} {dc_min[2]} {dc_min[1]} {dc_min[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {un_seg[3]} {un_seg[2]} {un_seg[1]} {un_seg[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {un_min[3]} {un_min[2]} {un_min[1]} {un_min[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {un_hrs[3]} {un_hrs[2]} {un_hrs[1]} {un_hrs[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {seg[7]} {seg[6]} {seg[5]} {seg[4]} {seg[3]} {seg[2]} {seg[1]} {seg[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {dc_seg[3]} {dc_seg[2]} {dc_seg[1]} {dc_seg[0]}]]
+file mkdir C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/P5.srcs/constrs_1/new
+close [ open C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/P5.srcs/constrs_1/new/constrains.xdc w ]
+add_files -fileset constrs_1 C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/P5.srcs/constrs_1/new/constrains.xdc
+set_property target_constrs_file C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/P5.srcs/constrs_1/new/constrains.xdc [current_fileset -constrset]
+save_constraints -force
+place_ports {an[7]} U13
+place_ports {an[6]} K2
+place_ports {an[5]} T14
+place_ports {an[4]} P14
+place_ports {an[3]} J14
+place_ports {an[2]} T9
+place_ports {an[1]} J18
+place_ports {an[0]} J17
+save_constraints
+place_ports {seg[7]} T10
+place_ports {seg[6]} R10
+place_ports {seg[5]} K16
+place_ports {seg[4]} K13
+place_ports {seg[3]} P15
+place_ports {seg[2]} T11
+place_ports {seg[1]} L18
+place_ports {seg[0]} H15
+save_constraints
+set_property IOSTANDARD LVCMOS33 [get_ports [list {un_seg[3]} {un_seg[2]} {un_seg[1]} {un_seg[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list led]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list clock]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list am_pm]]
+place_ports led R18
+save_constraints
+place_ports am_pm V16
+save_constraints
+set_property package_pin "" [get_ports [list  clock]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list clock]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list clock]]
+place_ports clock E3
+save_constraints
+close_design
+launch_simulation
+open_wave_config C:/Users/A00823315/Desktop/LabDigitales5-master_05/LabDigitales5-master/Counter_MOD12_BCD_behav.wcfg
+source Clock.tcl
+add_force {/Clock/clock} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+run 36000 ns
+synth_design -rtl -name rtl_1
+close_design
+synth_design -rtl -name rtl_1
+close_design
+close_sim
